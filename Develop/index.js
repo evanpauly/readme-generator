@@ -57,6 +57,71 @@ const questions = () => {
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Provide usage instructions (Required)',
+            validate: usageInput => {
+                if (usageInput) {
+                    return true;
+                } else {
+                    console.log('Please enter usage instructions');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'Provide license information (Required)',
+            validate: licenseInput => {
+                if (licenseInput) {
+                    return true;
+                } else {
+                    console.log('Please provide license information');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'Provide contribution instructions (Required)',
+            validate: contributionInput => {
+                if (contributionInput) {
+                    return true;
+                } else {
+                    console.log('Please provide contribution instructions');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: 'Provide testing instructions (Required)',
+            validate: testInput => {
+                if (testInput) {
+                    return true;
+                } else {
+                    console.log('Please provide testing instructions');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'How can people reach you with questions? (Required)',
+            validate: questionsInput => {
+                if (questionsInput) {
+                    return true;
+                } else {
+                    console.log('Please provide information for questions');
+                    return false;
+                }
+            }
+        },
     ]);
 };
 
