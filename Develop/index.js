@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const generateTemplate = require('./src/markdown-template')
-const { writeFile, copyFile } = require('./utils/generateMarkdown')
+const { writeFile, copyFile } = require('./utils/generate-markdown')
 
 // TODO: Create an array of questions for user input
 const questions = () => {
