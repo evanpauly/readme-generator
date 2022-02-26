@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+const fs = require('fs');
 const inquirer = require('inquirer');
 const generateTemplate = require('./src/markdown-template')
 const { writeFile, copyFile } = require('./utils/generate-markdown')
@@ -127,7 +128,15 @@ const questions = () => {
 };
 
 // TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            console.log(err);
+        }
+
+        console.log("README.md has been created.")
+    })
+}
 
 
 
@@ -138,6 +147,9 @@ const questions = () => {
 
 
 questions()
+    .then( pageData => {
+        return generateTemplate(pageData);
+    })
     .then(pageMarkdown => {
         return writeFile(pageMarkdown);
     })
