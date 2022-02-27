@@ -114,7 +114,7 @@ const questions = () => {
         {
             type: 'input',
             name: 'questions',
-            message: 'How can people reach you with questions? (Required)',
+            message: 'How can people reach you with questions and what is the best way to reach you? (Required)',
             validate: questionsInput => {
                 if (questionsInput) {
                     return true;
@@ -124,6 +124,32 @@ const questions = () => {
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'What is your github username?',
+            validate: questionsInput => {
+                if (questionsInput) {
+                    return true;
+                } else {
+                    console.log('Please provide your github username');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+            validate: questionsInput => {
+                if (questionsInput) {
+                    return true;
+                } else {
+                    console.log('Please provide your email address');
+                    return false;
+                }
+            }
+        }
     ]);
 };
 
@@ -152,10 +178,6 @@ questions()
     })
     .then(pageMarkdown => {
         return writeFile(pageMarkdown);
-    })
-    .then(writeFileResponse => {
-        console.log(writeFileResponse);
-        return copyFile();
     })
     .catch(err => {
         console.log(err);

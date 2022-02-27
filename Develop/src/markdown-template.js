@@ -1,37 +1,40 @@
 module.exports = templateData => {
-    const { title, description, installation, usage, license, contribution, test, questions } = templateData;
+    const { title, description, installation, usage, license, contribution, test, questions, username, email } = templateData;
 
-    return `
+return `
     # ${(title)}
-    ## Description: 
+
+    ## Description
     ${(description)}
 
     ## Table of Contents
 
-    * [Installation]
-    * [Usage]
-    * [Contributing]
-    * [Tests]
+    * [Installation] (#Installation)
+    * [Usage] (#Usage)
+    * [Contributing] (#Contribution)
+    * [Tests] (#Tests)
+    * [Questions] (#Questions)
         
         
-    ## Installation:
+    ## Installation
     ${(installation)}
 
-    ## Usage:
+    ## Usage
     ${(usage)}
 
-    ## License:
+    ## License
     ${(license)}
 
     ## Contribution
     ${(contribution)}
 
-    ## Test instructions
+    ## Tests
     ${(test)}
 
     ## Questions
+    GitHub: github.com/${(username)}
+    Email: ${(email)}
     ${(questions)}
-
 
     `;
 };
