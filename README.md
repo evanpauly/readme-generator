@@ -1,5 +1,9 @@
 # README Generator
 
+Sample:
+![Screenshot 2022-02-27 120412](https://user-images.githubusercontent.com/94558036/155894147-c89ad785-6450-4563-83db-fa575ab1a326.png)
+
+
 ## Description
 This app uses Node.js with the inquirer package to generate a README.md file by taking user input.
 
