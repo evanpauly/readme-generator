@@ -73,6 +73,12 @@ const questions = () => {
             }
         },
         {
+            type: 'checkbox',
+            name: 'licenseOptions',
+            message: 'Please choose a license',
+            choices: ['MIT', 'GPLv2', 'Apache', 'Other', 'None']
+        },
+        {
             type: 'input',
             name: 'license',
             message: 'Provide license information (Required)',
