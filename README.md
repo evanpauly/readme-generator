@@ -1,7 +1,7 @@
-# Placeholder Title
+# README Generator
 
 ## Description
-Placeholder Description
+This app uses Node.js with the inquirer package to generate a README.md file by taking user input.
 
 ## Table of Contents
 
@@ -13,26 +13,12 @@ Placeholder Description
     
   
 ## Installation
-Placeholder Instructions
+Clone into a folder on your local machine
 
 
 ## Usage
-Placeholder Instructions
-
-
-## License
-undefined
-
-
-## Contribution
-undefined
-
-
-## Tests
-Placeholder Instructions
-
+Open terminal under Develop, run `node index.js`, follow prompts
 
 ## Questions
-GitHub: (github.com/evanpauly)
+GitHub: github.com/evanpauly
 Email: evanpauly@hotmail.com
-email
