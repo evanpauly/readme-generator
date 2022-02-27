@@ -2,7 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateTemplate = require('./src/markdown-template')
-const { writeFile, copyFile } = require('./utils/generate-markdown')
+const { writeFile } = require('./utils/generate-markdown')
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -29,19 +29,6 @@ const questions = () => {
                     return true;
                 } else {
                     console.log('Please enter the description of your project');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'table of contents',
-            message: 'Provide a Table of Contents (Required)',
-            validate: tableInput => {
-                if (tableInput) {
-                    return true;
-                } else {
-                    console.log('Please enter a table of contents');
                     return false;
                 }
             }

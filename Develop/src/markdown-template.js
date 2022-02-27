@@ -9,30 +9,35 @@ return `
 
     ## Table of Contents
 
-    * [Installation] (#Installation)
-    * [Usage] (#Usage)
-    * [Contributing] (#Contribution)
-    * [Tests] (#Tests)
-    * [Questions] (#Questions)
+    * [Installation](#Installation)
+    * [Usage](#Usage)
+    * [Contribution](#Contribution)
+    * [Tests](#Tests)
+    * [Questions](#Questions)
         
-        
+      
     ## Installation
     ${(installation)}
 
+    
     ## Usage
     ${(usage)}
+
 
     ## License
     ${(license)}
 
+    
     ## Contribution
     ${(contribution)}
 
+    
     ## Tests
     ${(test)}
 
+    
     ## Questions
-    GitHub: github.com/${(username)}
+    GitHub: (github.com/${(username)})
     Email: ${(email)}
     ${(questions)}
 
