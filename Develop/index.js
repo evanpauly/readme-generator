@@ -1,10 +1,8 @@
-// TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateTemplate = require('./src/markdown-template')
 const { writeFile } = require('./utils/generate-markdown')
 
-// TODO: Create an array of questions for user input
 const questions = () => {
     return inquirer.prompt([
         {
@@ -79,17 +77,16 @@ const questions = () => {
             }
         },
         {
+            type: 'confirm',
+            name: 'confirmContribution',
+            message: 'Would you like to provide contribution instructions?',
+            default: true
+        },
+        {
             type: 'input',
-            name: 'contribution',
-            message: 'Provide contribution instructions (Required)',
-            validate: contributionInput => {
-                if (contributionInput) {
-                    return true;
-                } else {
-                    console.log('Please provide contribution instructions');
-                    return false;
-                }
-            }
+            name: 'Contribution',
+            message: 'Provide contribution instructions:',
+            when: ({ confirmContribution }) => confirmContribution
         },
         {
             type: 'input',
@@ -146,7 +143,6 @@ const questions = () => {
     ]);
 };
 
-// TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
@@ -156,14 +152,6 @@ function writeToFile(fileName, data) {
         console.log("README.md has been created.")
     })
 }
-
-
-
-// TODO: Create a function to initialize app
-
-
-// Function call to initialize app
-
 
 questions()
     .then( pageData => {
