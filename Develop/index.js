@@ -64,19 +64,6 @@ const questions = () => {
             choices: ['MIT', 'GPLv2', 'Apache', 'Other', 'None']
         },
         {
-            type: 'input',
-            name: 'license',
-            message: 'Provide license information (Required)',
-            validate: licenseInput => {
-                if (licenseInput) {
-                    return true;
-                } else {
-                    console.log('Please provide license information');
-                    return false;
-                }
-            }
-        },
-        {
             type: 'confirm',
             name: 'confirmContribution',
             message: 'Would you like to provide contribution instructions?',
